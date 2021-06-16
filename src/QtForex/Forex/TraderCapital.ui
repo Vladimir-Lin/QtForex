@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TraderCapital</class>
+ <widget class="QWidget" name="TraderCapital">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>260</width>
+    <height>180</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Account Deposit/Withdraw</string>
+  </property>
+  <widget class="QLineEdit" name="Account">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>240</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Account login</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Name">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>240</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Account name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Amount">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>240</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Amount</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Comment">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>240</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Comment</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Deposit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Deposit</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Withdraw">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>140</y>
+     <width>80</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Withdraw</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Done">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>140</y>
+     <width>60</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Done</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Deposit</sender>
+   <signal>clicked()</signal>
+   <receiver>TraderCapital</receiver>
+   <slot>deposit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>49</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Withdraw</sender>
+   <signal>clicked()</signal>
+   <receiver>TraderCapital</receiver>
+   <slot>withdraw()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>139</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Done</sender>
+   <signal>clicked()</signal>
+   <receiver>TraderCapital</receiver>
+   <slot>done()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>219</x>
+     <y>151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>129</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

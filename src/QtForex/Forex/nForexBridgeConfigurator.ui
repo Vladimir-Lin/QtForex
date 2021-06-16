@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>nForexBridgeConfigurator</class>
+ <widget class="QWidget" name="nForexBridgeConfigurator">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Forex Trading Connection Configurator</string>
+  </property>
+  <property name="toolTip">
+   <string>Forex Trading Connection Configurator</string>
+  </property>
+  <property name="statusTip">
+   <string>Forex Trading Connection Configurator</string>
+  </property>
+  <property name="whatsThis">
+   <string>Forex Trading Connection Configurator</string>
+  </property>
+  <widget class="QPushButton" name="Add">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>120</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Cancel">
+   <property name="geometry">
+    <rect>
+     <x>270</x>
+     <y>10</y>
+     <width>120</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Cancel</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Name">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Connection name</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Identifier">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Identifier</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Modules">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>60</y>
+     <width>200</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Modules</string>
+   </property>
+   <property name="statusTip">
+    <string>Modules</string>
+   </property>
+   <property name="whatsThis">
+    <string>Modules</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="Line" name="Line">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>48</y>
+     <width>620</width>
+     <height>2</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QStackedWidget" name="Stacked">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>620</width>
+     <height>370</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="Configure">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>120</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Configure</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>Add</sender>
+   <signal>clicked()</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>Add()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Configure</sender>
+   <signal>clicked()</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>Configurator()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>199</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>Cancel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>TextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Identifier</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>TextChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>319</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Modules</sender>
+   <signal>activated(int)</signal>
+   <receiver>nForexBridgeConfigurator</receiver>
+   <slot>ModuleChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>529</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>239</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

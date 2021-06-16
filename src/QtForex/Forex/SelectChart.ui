@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectChart</class>
+ <widget class="QWidget" name="SelectChart">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>220</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Chart selection</string>
+  </property>
+  <property name="toolTip">
+   <string>Chart selection</string>
+  </property>
+  <property name="statusTip">
+   <string>Chart selection</string>
+  </property>
+  <property name="whatsThis">
+   <string>Chart selection</string>
+  </property>
+  <widget class="QToolButton" name="Add">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Add chart</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/icons/add.png</normaloff>:/icons/add.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="Cancel">
+   <property name="geometry">
+    <rect>
+     <x>34</x>
+     <y>10</y>
+     <width>24</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Cancel</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="icon">
+    <iconset resource="../../Images/CIOS.qrc">
+     <normaloff>:/icons/remove.png</normaloff>:/icons/remove.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>24</width>
+     <height>24</height>
+    </size>
+   </property>
+   <property name="autoRaise">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="Name">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Name</string>
+   </property>
+  </widget>
+  <widget class="QCheckBox" name="Reversal">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>220</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Reversal symbol</string>
+   </property>
+   <property name="text">
+    <string>Reversal</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Supplier">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Supplier</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Level">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Symbols</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Symbols">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Periods</string>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="Periods">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>220</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../Images/CIOS.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Add</sender>
+   <signal>clicked()</signal>
+   <receiver>SelectChart</receiver>
+   <slot>Add()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>21</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Cancel</sender>
+   <signal>clicked()</signal>
+   <receiver>SelectChart</receiver>
+   <slot>Cancel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>45</x>
+     <y>21</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>99</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Supplier</sender>
+   <signal>activated(int)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>Changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Level</sender>
+   <signal>activated(int)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>Changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>141</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Name</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>NameChanged(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>51</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Symbols</sender>
+   <signal>activated(int)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>StateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>171</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Periods</sender>
+   <signal>activated(int)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>StateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Reversal</sender>
+   <signal>stateChanged(int)</signal>
+   <receiver>SelectChart</receiver>
+   <slot>StateChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>77</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
